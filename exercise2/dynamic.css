@@ -1,0 +1,41 @@
+
+body
+ {    
+background-color: #BDB76B;
+max-height:400px;;
+}
+
+#container{
+position:absolute;
+height:400px;
+}	
+#navbar{
+position:static;
+padding-right:20px;
+right:0;
+float:right;
+margin-left:50px;
+width:10%;
+
+}
+
+#content{
+position: static;
+
+    margin-bottom: 25px;
+    padding: 10px;
+    
+    width: 80%;
+}
+#footer {
+
+padding-bottom:5px;
+margin-top:250px; 
+background-color:brown;
+height: 40px;
+clear:both;
+} 
+
+
+
+
