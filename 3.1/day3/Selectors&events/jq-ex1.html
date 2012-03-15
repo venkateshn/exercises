@@ -1,0 +1,232 @@
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <title>Document</title>
+  <!-- Add JQuery here -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+   
+
+  
+<style type="text/css">
+  .a { color: Navy; }
+  .b { color: Maroon; }
+
+ table {
+    background:#eeeeee;
+  }
+
+   
+
+  </style>
+  <script type="text/javascript">
+      $("document").ready(function() {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          $('#button1').toggle(function() {
+              $("*").css("border", "3px solid red");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+
+	   $("document").ready(function() {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          $('#button2').toggle(function() {
+              $("p").css("border", "3px solid red");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+	   $("document").ready(function() {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          $('#button3').toggle(function() {
+              $("p").css("border", "3px solid red");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+	 
+
+
+       $("document").ready(function() {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          $('#button5').toggle(function() {
+             $("tr:first").css("font-style", "italic");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+
+
+ $("document").ready(function() {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          $('#button6').toggle(function() {
+             $("tr:last").css({backgroundColor: 'yellow', fontWeight: 'bolder'});
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+
+	   $("document").ready(function() {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          $('#button7').toggle(function() {
+             $("tr:even").css("background-color", "#bbbbff");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+
+	   $("document").ready(function() {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          $('#button8').toggle(function() {
+             $("tr:odd").css("background-color", "#bbbbff");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+
+	   $("document").ready(function() {
+          
+          $('#button9').toggle(function() {
+             $("p:contains('He')").css("text-decoration", "underline");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+
+	   $("document").ready(function() {
+          
+          $('#button10').toggle(function() {
+             $("p:empty").text("Was empty!").css("background-color", "#bbbbff");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+
+     $(document).ready(function(){
+		  $($("#button11")).toggle(function (){
+
+		$("#hidden").text("Was empty! this is the hidden field!!!!").css('background', 'rgb(255,220,200)');
+		 }, function() {
+              $("p").css("border", "");
+			  var hiddenEls = $("body").find(":hidden").not("script");
+          alert("the length is "+hiddenEls.length);
+		  });  
+		   }); 
+
+		 
+		  
+
+
+ $("document").ready(function() {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          $('#button12').toggle(function() {
+             $("ul.vendor > li").css("border", "3px double blue");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+
+  </script>
+
+
+
+
+ 
+  </head>
+
+
+  <body>
+      <ul id="list1">
+          <li class="a">item 1</li>
+          <li class="a">item 2</li>
+          <li class="b">item 3</li>
+          <li class="b">item 4</li>
+      </ul>
+      <p class="a">This is paragraph 1</p>
+      <p>This is paragraph 2</p>
+      <p class="b">This is paragraph 3</p>
+      <p>This is paragraph 4</p>
+      <!-- Add multiple buttons for each selector -->
+      <input type="button" id="button1" value="Select All Ps" />
+	  <input type="button" id="button2" value="Select All Ps" />
+		<input type="button" id="button3" value="Select All Ps" />
+
+
+
+<br><br>
+
+
+<table border="1">
+<tr>
+<th>EmpNo</th>
+<th>Name</th>
+</tr>
+<tr>
+<td>1</td>
+<td>venkat</td>
+</tr>
+<tr>
+<td> 2</td>
+<td>suman</td>
+</tr>
+<tr>
+<td> 3</td>
+<td>Tata</td>
+</tr>
+<tr>
+<td> 4</td>
+<td>Consultancy</td>
+</tr>
+</table> 
+<script></script>
+
+ <!-- Add multiple buttons for each selector -->
+      <input type="button" id="button5" value="first" />
+	  <input type="button" id="button6" value="last" />
+
+		<input type="button" id="button7" value="even" />
+	<input type="button" id="button8" value="odd" />
+
+
+
+
+<p>
+
+Montrose was born in San Francisco[1]. While as a toddler his Mother & Father moved back to his Mothers home State of Colorado,(his father was from Bertrand, Nebraska & his mother was from Golden, Colorado). He spent most of his younger years there until he ran away at about 16 years old to pursue his musical career. He ultimately spent most of his life in the San Francisco Bay area .[2] In 1969, he started out in a band called Sawbuck with Bill Church. Montrose had been in the process of recording what would have been his first album with Sawbuck when David Rubinson, the producer, arranged an audition with Van Morrison. Montrose got the job and played on Morrison's 1971 album Tupelo Honey.[3] He also played on the song "Listen to the Lion", which was recorded during the Tupelo Honey sessions but released on Morrison's next album
+</p>
+<p></p>
+
+<p id="hidden"></p>
+
+
+
+
+<ul class="vendor">
+    <li>Exercise 1</li>
+    <li>Exercise 2 
+        <ul><li>Exercise item 1</li><li>Exercise item 2</li><li>Nested item 3</li></ul>
+       </li>
+    <li>Exercise 3</li>
+	<li>Exercise 4</li>
+
+</ul>
+
+
+
+<input type="button" id="button9" value="contains" />
+	<input type="button" id="button10" value="empty" />
+<input type="button" id="button11" value="hidden" />
+<input type="button" id="button12" value="child" />
+  </body>
+  </html>
+
+ 
+

@@ -1,0 +1,58 @@
+    
+<html>
+  <head>
+	  <title>Sample form</title>
+     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        
+            $("form").submit(function() {
+                alert("submit");                  
+			});
+			
+			$("input").change(function(){
+				$(this).css("background-color","#FFFFCC");
+			});
+  
+ 
+        $("input").change(function(){;
+             alert('changing click');
+         }); 
+       $('#target').focus(function() {
+             alert('Handler for focus() called.');
+        });
+        
+      $("#target1").select(function(){
+      $("input").after(" Text marked!");
+       });
+  
+ 
+        });
+    </script>
+  </head>
+  <body>
+    <body>
+		
+    <form action="" method="Post">
+        <div>
+			
+<p>Enter your Name    : <input type="text" id="target"/></p>
+<p>Enter U R Address: <input type="text" id="target1" /></p>
+         
+          
+         <input id="Submit1" type="submit" value="submit"/>
+        </div>
+     </form>
+
+     <div>On focusing text box name, alert message will be shown. 
+     <br/ > 
+     On changing text in text box address, background colour will change.
+		<br />
+		On selecting any text in address text box, text will appended to all input elements
+		<br />
+		Alert message will be displayed when the form is submitted. 
+	</div>
+
+
+    </body>
+</html>

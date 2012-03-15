@@ -1,0 +1,58 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <title>Events with jQuery</title>
+  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+      <script type="text/javascript">
+
+         $(document).ready(function() {
+
+	 $('#evtTarget').bind('mouseover mouseout',highlight) 
+         $('#button1').bind('click', function(event) {
+         alert('The mouse cursor is at ('
+                + event.pageX + ', ' + event.pageY + ')');
+	
+  });
+
+   $('#button2').click(function() {
+	$('#button1').unbind('click');
+	
+	});
+	$('#button3').click(function() {
+		$('#button1').trigger('click');
+
+	});
+function highlight(evt) {
+    $("#evtTarget").toggleClass("highlighted");
+          }
+ 
+ $("div").delegate("button","click",function(){
+    $("p").slideToggle();
+  });
+
+
+    });     
+      </script>
+      <style type='text/css'>
+          .normal {
+              width: 300px;
+              height: 200px;
+              background-color: Yellow;
+              font-size: 18pt;
+          }
+
+          .highlighted {
+              background-color: Red;
+          }
+      </style>
+  </head>
+  <body>
+  <h1>Binding Event Example</h1>
+  <div id="evtTarget" class="normal"><p>Mouse over this div to see the effect. Click on it to unbind the mouseover.</p><button>delegate me!</button>   <p><input type="button" id="button1" value="click me"/> 
+  <input type="button" id="button2" value="click me"/> <input type="button" id="button3" value="trigger me"/></p></div>
+
+  </body>
+  </html>
+
