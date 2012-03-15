@@ -1,0 +1,109 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <title>jQuery Showing and Hiding an Element</title>
+      <!-- Add Jquery -->
+       <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+      <script type="text/javascript">
+          $(function() {
+			  $(document).ready(function(){
+			  
+			   $("#hide").click(function(){
+             $("p").hide();
+               });
+            $("#show").click(function(){
+            $("p").show();
+          });
+         });
+         
+         $("button").click(function () {
+         $("p").toggle();
+         });
+         $("#right").click(function(){
+  $("#theDiv").animate({
+    width: "70%",
+    opacity: 0.4,
+    marginLeft: "0.6in",
+    fontSize: "3em",
+    borderWidth: "10px"
+  }, 1500 );
+});
+	$( "#text" ).click(function(){
+  $( "#theDiv" ).animate( { width: "90%" }, { queue: false, duration: 3000 })
+     .animate({ fontSize: "24px" }, 1500 )
+     .animate({ borderRightWidth: "15px" }, 1500 );
+});
+	$( "#toggle1" ).click(function(){
+  $( ".block:first" ).animate({
+    left: 100
+  }, {
+    duration: 1000,
+    step: function( now, fx ){
+      $( ".block:gt(0)" ).css( "left", now );
+    }
+  });
+	 $("#fadeout").click(function(){
+    $("p").fadeOut()
+  });
+  $("#fadein").click(function(){
+    $("p").fadeIn();
+  });
+  $("#slideup").click(function(){
+    $("p").slideUp();
+  });
+  $("#slidedown").click(function(){
+    $("p").slideDown();
+  });
+ $("toggleslide").click(function(){
+    $("p").slideToggle();
+  });
+});
+
+
+
+
+              // Show, hide and toggle theDiv element
+              // Animate and grow the width, font size, and position of theDiv element
+              // Fade In, Out
+              // Slide In, out, Toggle
+          });
+      </script>
+      <style type="text/css">
+          div#theDiv {
+              width: 250px;
+              height: 180px;
+              margin: 10px;
+              padding: 20px;
+              background: blue;
+              border: 2px solid black;
+              cursor: pointer;
+          }
+          p, span {
+              font-size: 16pt;
+          }
+          button {
+              margin: 5px;
+          }
+      </style>
+  </head>
+  <body>
+      <p>Showing and Hiding an Element</p>
+      <p style="display: none">Good Bye</p>
+
+      <div id="theDiv" class="block">
+          Showing and Hiding an Element
+      </div>
+      
+      <button id="show">Show</button>
+      <button id="hide">Hide</button>
+      <button id="toggle">Toggle</button>
+      <button id="right">Grow Right</button>
+      <button id="text">Big Text</button>
+      <button id="toggle1">Move Div</button>
+      <button id="fadein">Fade In</button>
+      <button id="fadeout">Fade Out</button>
+      
+      <button id="slideup">Slide Up</button>
+      <button id="slidedown">Slide Down</button>
+      <button id="toggleslide">Toggle Slide</button>
+  </body>
+  </html>

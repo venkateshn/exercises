@@ -1,0 +1,91 @@
+DOM Manipulation
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <title>Document</title>
+      <!-- Include JQuery Library -->
+      
+		  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+		  <script type="text/javascript">
+          $("document").ready(function() {
+			  
+			  $("#Submit1").click(function(){
+                $("p").clone().appendTo("body");
+            });
+             
+				$("#Submit2").click(function(){
+
+			        $("p:last").addClass("selected highlight");
+			   });
+			   
+			    $("#Submit3").click(function(){
+			   
+			         $("p").after("<b>Hello</b>");
+			   });
+			   
+			    $("#Submit4").click(function(){
+			          $("p").append("<strong>Venkat</strong>");
+			    });
+			    
+			    $("#Submit5").click(function(){
+					
+			          $("p").before("<b>venkat</b>");
+			    });
+			     $("#Submit6").click(function(){
+			            $("p").remove();
+
+
+               });
+                $("#Submit7").click(function(){
+                 $("input:text").val("Venkatesh");
+               });
+		      $("#Submit8").click(function(){
+                 alert($("input:text").val());
+                  });
+             $("#Submit9").click(function () {
+               $(this).replaceWith( "<div>" + $(this).text() + "</div>" );
+                  });
+
+
+			
+			
+
+
+			  
+              // Change html,
+              // Add handling for creating elements, append, prepend and warp around elements
+          });
+      </script>
+      <style type="text/css">
+        p { margin: 8px; font-size:16px; }
+  .selected { color:blue; }
+  .highlight { background:yellow; }
+  
+   button { display:block; margin:3px; color:red; width:200px; }
+  div { color:red; border:2px solid blue; width:200px;
+      margin:3px; text-align:center; }
+
+
+      </style>
+  </head>
+  <body>
+      
+      <p class="a">This is paragraph 1</p>
+     <p>This is another paragraph.</p>
+     <p class="hello">Hello</p>
+     <input type="text" name="user" />
+
+
+    
+     
+     <input id="Submit1" type="submit" value="clone"/>
+     <input id="Submit2" type="submit" value="addClass"/>
+     <input id="Submit3" type="submit" value="after"/>
+     <input id="Submit4" type="submit" value="append"/>
+     <input id="Submit5" type="submit" value="before"/>
+     <input id="Submit6" type="submit" value="remove"/>
+     <input id="Submit7" type="submit" value="set"/>
+      <input id="Submit8" type="submit" value="get"/>
+       <input id="Submit9" type="submit" value="Change"/>
+      
+  </body>
+  </html>
