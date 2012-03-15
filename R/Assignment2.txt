@@ -1,0 +1,34 @@
+1)Barplot of the number of India wins in games against Pak year-over-year  
+indwon<-ODI[ODI$Winner=="India",]
+
+ vspak<-indwon[indwon$Team1=="Pakistan" | indwon$Team2=="Pakistan",]
+
+ x<-aggregate(vspak$Matchyear,list(vspak$Matchyear),FUN=length)
+
+ barplot(x[,2],names.arg=x[,1],ylim=c(0,7))
+
+
+
+
+
+2)Barplot of India's % wins in each ground_country
+
+   indwon<-ODI[ODI$Winner=="India",]
+
+   aggregate(indwon$Ground_Country,list(indwon$Ground_Country),FUN=length)
+
+   y<-aggregate(indwon$Ground_Country,list(indwon$Ground_Country),FUN=length) 
+
+   barplot(y[,2],names.arg=y[,1],ylim=c(0,200))
+
+
+
+3) Barplot of Top 10 grounds with most number of matches
+
+ y<-aggregate(ODI$Ground,list(ODI$Ground),FUN=length)
+
+   Z<-y[order(-y$x),]
+
+   topten<-Z[1:10,]
+
+   barplot(topten[,2],names.arg=topten[,1],ylim=c(0,250)

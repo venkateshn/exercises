@@ -1,0 +1,13 @@
+1) How many games has India won?
+
+ nrow(ODI[ODI$Winner==" India",])
+2) What is the highest score in an inning?
+  max(ODI[,6],ODI[,7])
+3) How many games were played in 1980 and 2010?
+  nrow(ODI[(ODI$Matchyear==1980 | ODI$Matchyear==2010),])
+4) How many games were won by India in 1980?  
+ nrow(ODI[ODI$Matchyear==1980 & ODI$Winner==" India",])
+5) What is India's win % since 1980?
+   ( nrow(ODI[ODI$Winner==" India" & ODI$Matchyear>=1980,]) / nrow(ODI[(ODI$Team1==" India" | ODI$Team2==" India") & ODI$Matchyear>=1980,]) ) * 100
+6) Bonus: Who has won most games? 
+  a[which(max(aggregate(ODI[,4],list(ODI$Winner),FUN=length)$x)== aggregate(ODI[,4],list(ODI$Winner),FUN=length)$x),]
