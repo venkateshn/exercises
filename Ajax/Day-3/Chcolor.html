@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript">
+      $("document").ready(function() {          
+			$('#button').click(function() {
+				changecolor();
+            })
+
+			$('#button').dblclick(function() {
+				$("p").css("color", "black");
+				$('#button').attr('value','Click to Change Color');
+            })
+
+			function changecolor()
+			{
+				$("p").css("color", "red");
+				$('#button').attr('value','Double click to reset color');
+			}
+      });
+  </script>
+
+  </head>
+  <body>
+
+
+          <P>This is Venkatesh<P>
+          <P>This is Venkateswara Rao</P>
+          <P>This is App Dev University</P>
+          
+          <span> This is Span tag</span> </br></br>
+		  <div>This is DIV tag</DIV></br></br>
+	  <input type="button" class="btn" id="button" value="Click to change Color" /> 
+
+
+  </body>
+  </html>
